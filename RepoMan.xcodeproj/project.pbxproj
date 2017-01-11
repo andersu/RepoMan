@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FE6AECE1E26A68A007F535A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AECD1E26A68A007F535A /* AppDelegate.swift */; };
+		9FE6AED31E26A68A007F535A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED11E26A68A007F535A /* Main.storyboard */; };
+		9FE6AED51E26A68A007F535A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED41E26A68A007F535A /* Assets.xcassets */; };
+		9FE6AED81E26A68A007F535A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED61E26A68A007F535A /* LaunchScreen.storyboard */; };
+		9FE6AEE31E26A68A007F535A /* RepoManTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AEE21E26A68A007F535A /* RepoManTests.swift */; };
+		9FE6AEF61E26A6D3007F535A /* GithubConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AEF01E26A6D3007F535A /* GithubConfigurator.swift */; };
+		9FE6AEF71E26A6D3007F535A /* GithubInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AEF11E26A6D3007F535A /* GithubInteractor.swift */; };
+		9FE6AEF81E26A6D3007F535A /* GithubPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AEF21E26A6D3007F535A /* GithubPresenter.swift */; };
+		9FE6AEF91E26A6D3007F535A /* GithubRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AEF31E26A6D3007F535A /* GithubRouter.swift */; };
+		9FE6AEFA1E26A6D3007F535A /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AEF41E26A6D3007F535A /* GithubViewController.swift */; };
+		9FE6AEFB1E26A6D3007F535A /* GithubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AEF51E26A6D3007F535A /* GithubViewModel.swift */; };
+		9FE6AEFE1E26A705007F535A /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AEFD1E26A705007F535A /* GithubService.swift */; };
+		9FE6AF011E26A73A007F535A /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF001E26A73A007F535A /* Repo.swift */; };
+		9FE6AF041E26A9AC007F535A /* NibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF031E26A9AC007F535A /* NibLoadingView.swift */; };
+		9FE6AF0A1E26AA30007F535A /* GithubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AF091E26AA30007F535A /* GithubView.xib */; };
+		9FE6AF0E1E26AB67007F535A /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF0D1E26AB67007F535A /* NibDesignable.swift */; };
+		9FE6AF101E26AB94007F535A /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF0F1E26AB94007F535A /* RepoCell.swift */; };
+		9FE6AF121E26ABA4007F535A /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AF111E26ABA4007F535A /* RepoCell.xib */; };
+		9FE6AF141E26ACD9007F535A /* GithubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF131E26ACD9007F535A /* GithubView.swift */; };
+		9FE6AF1C1E26B11B007F535A /* RepoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF161E26B11B007F535A /* RepoConfigurator.swift */; };
+		9FE6AF1D1E26B11B007F535A /* RepoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF171E26B11B007F535A /* RepoInteractor.swift */; };
+		9FE6AF1E1E26B11B007F535A /* RepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF181E26B11B007F535A /* RepoPresenter.swift */; };
+		9FE6AF1F1E26B11B007F535A /* RepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF191E26B11B007F535A /* RepoRouter.swift */; };
+		9FE6AF201E26B11B007F535A /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF1A1E26B11B007F535A /* RepoViewController.swift */; };
+		9FE6AF211E26B11B007F535A /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF1B1E26B11B007F535A /* RepoViewModel.swift */; };
+		9FE6AF241E26B132007F535A /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF231E26B132007F535A /* RepoView.swift */; };
+		9FE6AF261E26B148007F535A /* RepoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AF251E26B148007F535A /* RepoView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FE6AEDF1E26A68A007F535A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FE6AEC21E26A68A007F535A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FE6AEC91E26A68A007F535A;
+			remoteInfo = RepoMan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9FE6AECA1E26A68A007F535A /* RepoMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE6AECD1E26A68A007F535A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FE6AED21E26A68A007F535A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FE6AED41E26A68A007F535A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FE6AED71E26A68A007F535A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FE6AED91E26A68A007F535A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FE6AEDE1E26A68A007F535A /* RepoManTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoManTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE6AEE21E26A68A007F535A /* RepoManTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoManTests.swift; sourceTree = "<group>"; };
+		9FE6AEE41E26A68A007F535A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FE6AEF01E26A6D3007F535A /* GithubConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubConfigurator.swift; sourceTree = "<group>"; };
+		9FE6AEF11E26A6D3007F535A /* GithubInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubInteractor.swift; sourceTree = "<group>"; };
+		9FE6AEF21E26A6D3007F535A /* GithubPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubPresenter.swift; sourceTree = "<group>"; };
+		9FE6AEF31E26A6D3007F535A /* GithubRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRouter.swift; sourceTree = "<group>"; };
+		9FE6AEF41E26A6D3007F535A /* GithubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
+		9FE6AEF51E26A6D3007F535A /* GithubViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubViewModel.swift; sourceTree = "<group>"; };
+		9FE6AEFD1E26A705007F535A /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		9FE6AF001E26A73A007F535A /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		9FE6AF031E26A9AC007F535A /* NibLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadingView.swift; sourceTree = "<group>"; };
+		9FE6AF091E26AA30007F535A /* GithubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GithubView.xib; sourceTree = "<group>"; };
+		9FE6AF0D1E26AB67007F535A /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDesignable.swift; sourceTree = "<group>"; };
+		9FE6AF0F1E26AB94007F535A /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		9FE6AF111E26ABA4007F535A /* RepoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
+		9FE6AF131E26ACD9007F535A /* GithubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubView.swift; sourceTree = "<group>"; };
+		9FE6AF161E26B11B007F535A /* RepoConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoConfigurator.swift; sourceTree = "<group>"; };
+		9FE6AF171E26B11B007F535A /* RepoInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoInteractor.swift; sourceTree = "<group>"; };
+		9FE6AF181E26B11B007F535A /* RepoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoPresenter.swift; sourceTree = "<group>"; };
+		9FE6AF191E26B11B007F535A /* RepoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoRouter.swift; sourceTree = "<group>"; };
+		9FE6AF1A1E26B11B007F535A /* RepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
+		9FE6AF1B1E26B11B007F535A /* RepoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
+		9FE6AF231E26B132007F535A /* RepoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
+		9FE6AF251E26B148007F535A /* RepoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FE6AEC71E26A68A007F535A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FE6AEDB1E26A68A007F535A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FE6AEC11E26A68A007F535A = {
+			isa = PBXGroup;
+			children = (
+				9FE6AECC1E26A68A007F535A /* RepoMan */,
+				9FE6AEE11E26A68A007F535A /* RepoManTests */,
+				9FE6AECB1E26A68A007F535A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FE6AECB1E26A68A007F535A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AECA1E26A68A007F535A /* RepoMan.app */,
+				9FE6AEDE1E26A68A007F535A /* RepoManTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FE6AECC1E26A68A007F535A /* RepoMan */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AECD1E26A68A007F535A /* AppDelegate.swift */,
+				9FE6AED41E26A68A007F535A /* Assets.xcassets */,
+				9FE6AED91E26A68A007F535A /* Info.plist */,
+				9FE6AEED1E26A692007F535A /* Storyboards */,
+				9FE6AEEE1E26A69C007F535A /* Scenes */,
+				9FE6AEFF1E26A726007F535A /* Models */,
+				9FE6AEFC1E26A6E4007F535A /* Services */,
+				9FE6AF021E26A961007F535A /* Views */,
+				9FE6AF0B1E26AB31007F535A /* ThirdParty */,
+			);
+			path = RepoMan;
+			sourceTree = "<group>";
+		};
+		9FE6AEE11E26A68A007F535A /* RepoManTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AEE21E26A68A007F535A /* RepoManTests.swift */,
+				9FE6AEE41E26A68A007F535A /* Info.plist */,
+			);
+			path = RepoManTests;
+			sourceTree = "<group>";
+		};
+		9FE6AEED1E26A692007F535A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AED11E26A68A007F535A /* Main.storyboard */,
+				9FE6AED61E26A68A007F535A /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		9FE6AEEE1E26A69C007F535A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AF151E26B0FD007F535A /* Repo */,
+				9FE6AEEF1E26A6B2007F535A /* Github */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9FE6AEEF1E26A6B2007F535A /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AF081E26A9F4007F535A /* VIew */,
+				9FE6AEF01E26A6D3007F535A /* GithubConfigurator.swift */,
+				9FE6AEF11E26A6D3007F535A /* GithubInteractor.swift */,
+				9FE6AEF21E26A6D3007F535A /* GithubPresenter.swift */,
+				9FE6AEF31E26A6D3007F535A /* GithubRouter.swift */,
+				9FE6AEF41E26A6D3007F535A /* GithubViewController.swift */,
+				9FE6AEF51E26A6D3007F535A /* GithubViewModel.swift */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		9FE6AEFC1E26A6E4007F535A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AEFD1E26A705007F535A /* GithubService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9FE6AEFF1E26A726007F535A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AF001E26A73A007F535A /* Repo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FE6AF021E26A961007F535A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AF031E26A9AC007F535A /* NibLoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9FE6AF081E26A9F4007F535A /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AF131E26ACD9007F535A /* GithubView.swift */,
+				9FE6AF091E26AA30007F535A /* GithubView.xib */,
+				9FE6AF0F1E26AB94007F535A /* RepoCell.swift */,
+				9FE6AF111E26ABA4007F535A /* RepoCell.xib */,
+			);
+			name = VIew;
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FE6AF0B1E26AB31007F535A /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AF0C1E26AB55007F535A /* NibDesignable */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		9FE6AF0C1E26AB55007F535A /* NibDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AF0D1E26AB67007F535A /* NibDesignable.swift */,
+			);
+			path = NibDesignable;
+			sourceTree = "<group>";
+		};
+		9FE6AF151E26B0FD007F535A /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AF221E26B120007F535A /* View */,
+				9FE6AF161E26B11B007F535A /* RepoConfigurator.swift */,
+				9FE6AF171E26B11B007F535A /* RepoInteractor.swift */,
+				9FE6AF181E26B11B007F535A /* RepoPresenter.swift */,
+				9FE6AF191E26B11B007F535A /* RepoRouter.swift */,
+				9FE6AF1A1E26B11B007F535A /* RepoViewController.swift */,
+				9FE6AF1B1E26B11B007F535A /* RepoViewModel.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		9FE6AF221E26B120007F535A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FE6AF231E26B132007F535A /* RepoView.swift */,
+				9FE6AF251E26B148007F535A /* RepoView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FE6AEC91E26A68A007F535A /* RepoMan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FE6AEE71E26A68A007F535A /* Build configuration list for PBXNativeTarget "RepoMan" */;
+			buildPhases = (
+				9FE6AEC61E26A68A007F535A /* Sources */,
+				9FE6AEC71E26A68A007F535A /* Frameworks */,
+				9FE6AEC81E26A68A007F535A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RepoMan;
+			productName = RepoMan;
+			productReference = 9FE6AECA1E26A68A007F535A /* RepoMan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FE6AEDD1E26A68A007F535A /* RepoManTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FE6AEEA1E26A68A007F535A /* Build configuration list for PBXNativeTarget "RepoManTests" */;
+			buildPhases = (
+				9FE6AEDA1E26A68A007F535A /* Sources */,
+				9FE6AEDB1E26A68A007F535A /* Frameworks */,
+				9FE6AEDC1E26A68A007F535A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FE6AEE01E26A68A007F535A /* PBXTargetDependency */,
+			);
+			name = RepoManTests;
+			productName = RepoManTests;
+			productReference = 9FE6AEDE1E26A68A007F535A /* RepoManTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FE6AEC21E26A68A007F535A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Anders Ullnæss";
+				TargetAttributes = {
+					9FE6AEC91E26A68A007F535A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 643MJ6ZSSD;
+						ProvisioningStyle = Automatic;
+					};
+					9FE6AEDD1E26A68A007F535A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 643MJ6ZSSD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9FE6AEC91E26A68A007F535A;
+					};
+				};
+			};
+			buildConfigurationList = 9FE6AEC51E26A68A007F535A /* Build configuration list for PBXProject "RepoMan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FE6AEC11E26A68A007F535A;
+			productRefGroup = 9FE6AECB1E26A68A007F535A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FE6AEC91E26A68A007F535A /* RepoMan */,
+				9FE6AEDD1E26A68A007F535A /* RepoManTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FE6AEC81E26A68A007F535A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE6AED81E26A68A007F535A /* LaunchScreen.storyboard in Resources */,
+				9FE6AF121E26ABA4007F535A /* RepoCell.xib in Resources */,
+				9FE6AF261E26B148007F535A /* RepoView.xib in Resources */,
+				9FE6AF0A1E26AA30007F535A /* GithubView.xib in Resources */,
+				9FE6AED51E26A68A007F535A /* Assets.xcassets in Resources */,
+				9FE6AED31E26A68A007F535A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FE6AEDC1E26A68A007F535A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FE6AEC61E26A68A007F535A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE6AEF71E26A6D3007F535A /* GithubInteractor.swift in Sources */,
+				9FE6AF0E1E26AB67007F535A /* NibDesignable.swift in Sources */,
+				9FE6AF201E26B11B007F535A /* RepoViewController.swift in Sources */,
+				9FE6AECE1E26A68A007F535A /* AppDelegate.swift in Sources */,
+				9FE6AEFE1E26A705007F535A /* GithubService.swift in Sources */,
+				9FE6AF041E26A9AC007F535A /* NibLoadingView.swift in Sources */,
+				9FE6AF211E26B11B007F535A /* RepoViewModel.swift in Sources */,
+				9FE6AF101E26AB94007F535A /* RepoCell.swift in Sources */,
+				9FE6AF011E26A73A007F535A /* Repo.swift in Sources */,
+				9FE6AF1F1E26B11B007F535A /* RepoRouter.swift in Sources */,
+				9FE6AEFB1E26A6D3007F535A /* GithubViewModel.swift in Sources */,
+				9FE6AF1C1E26B11B007F535A /* RepoConfigurator.swift in Sources */,
+				9FE6AF1D1E26B11B007F535A /* RepoInteractor.swift in Sources */,
+				9FE6AEF61E26A6D3007F535A /* GithubConfigurator.swift in Sources */,
+				9FE6AF241E26B132007F535A /* RepoView.swift in Sources */,
+				9FE6AF141E26ACD9007F535A /* GithubView.swift in Sources */,
+				9FE6AF1E1E26B11B007F535A /* RepoPresenter.swift in Sources */,
+				9FE6AEFA1E26A6D3007F535A /* GithubViewController.swift in Sources */,
+				9FE6AEF81E26A6D3007F535A /* GithubPresenter.swift in Sources */,
+				9FE6AEF91E26A6D3007F535A /* GithubRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FE6AEDA1E26A68A007F535A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE6AEE31E26A68A007F535A /* RepoManTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FE6AEE01E26A68A007F535A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FE6AEC91E26A68A007F535A /* RepoMan */;
+			targetProxy = 9FE6AEDF1E26A68A007F535A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FE6AED11E26A68A007F535A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FE6AED21E26A68A007F535A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FE6AED61E26A68A007F535A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FE6AED71E26A68A007F535A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FE6AEE51E26A68A007F535A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FE6AEE61E26A68A007F535A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FE6AEE81E26A68A007F535A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 643MJ6ZSSD;
+				INFOPLIST_FILE = RepoMan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.zredna.RepoMan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9FE6AEE91E26A68A007F535A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 643MJ6ZSSD;
+				INFOPLIST_FILE = RepoMan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.zredna.RepoMan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9FE6AEEB1E26A68A007F535A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 643MJ6ZSSD;
+				INFOPLIST_FILE = RepoManTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.zredna.RepoManTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepoMan.app/RepoMan";
+			};
+			name = Debug;
+		};
+		9FE6AEEC1E26A68A007F535A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 643MJ6ZSSD;
+				INFOPLIST_FILE = RepoManTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.zredna.RepoManTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepoMan.app/RepoMan";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FE6AEC51E26A68A007F535A /* Build configuration list for PBXProject "RepoMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FE6AEE51E26A68A007F535A /* Debug */,
+				9FE6AEE61E26A68A007F535A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FE6AEE71E26A68A007F535A /* Build configuration list for PBXNativeTarget "RepoMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FE6AEE81E26A68A007F535A /* Debug */,
+				9FE6AEE91E26A68A007F535A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9FE6AEEA1E26A68A007F535A /* Build configuration list for PBXNativeTarget "RepoManTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FE6AEEB1E26A68A007F535A /* Debug */,
+				9FE6AEEC1E26A68A007F535A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FE6AEC21E26A68A007F535A /* Project object */;
+}
