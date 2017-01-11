@@ -1,2 +1,2 @@
 # RepoMan
-An example projects showing the usage of the templates at https://github.com/andersu/clean-swift-templates
+An example project showing the usage of the templates at https://github.com/andersu/clean-swift-templates
