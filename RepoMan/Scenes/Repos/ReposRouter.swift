@@ -1,22 +1,22 @@
 //
-//  GithubRouter.swift
+//  ReposRouter.swift
 //  RepoMan
 //
-//  Created by Anders Ullnæss on 11/01/17.
+//  Created by Anders Ullnæss on 21/01/17.
 //  Copyright (c) 2017 Anders Ullnæss. All rights reserved.
 //
 
 import UIKit
 
-protocol GithubRouterInput {
-    func goToRepoPage(repo: Repo)
+protocol ReposRouterInput {
+    
 }
 
-class GithubRouter: GithubRouterInput {
+class ReposRouter: ReposRouterInput {
     
-    weak var viewController: GithubViewController!
+    weak var viewController: ReposViewController!
     
-    init(viewController: GithubViewController) {
+    init(viewController: ReposViewController) {
         self.viewController = viewController
     }
     

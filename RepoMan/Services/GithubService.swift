@@ -9,14 +9,54 @@
 import Foundation
 
 class GithubService {
+    private let logTag = String(describing: GithubService.self)
+    private var client: HttpClient
     
-    // Hard coded for the example's sake. Would normally call an api.
-    func getRepos(completion: @escaping ([Repo]?) -> Void) {
-        let random = Int(arc4random_uniform(1)) // returns 0 or 1
-        if random == 0 {
-            completion([Repo(name: "RepoMan"), Repo(name: "CoolProject"), Repo(name: "Calculator")])
-        } else {
-            completion(nil)
+    init(client: HttpClient) {
+        self.client = client
+    }
+    
+    func getUser(username: String, completion: @escaping (User?) -> Void) {
+        client.get(url: Constants.Api.getUserUrl(username: username)) { (data, error) in
+            var user: User?
+            
+            if let data = data {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.mutableContainers) as? [String: Any] {
+                        user = User.from(json: json)
+                    }
+                } catch {
+                    Logger.printDebug(tag: self.logTag, error.localizedDescription)
+                }
+            }
+            
+            if let error = error {
+                Logger.printDebug(tag: self.logTag, error.localizedDescription)
+            }
+            
+            completion(user)
+        }
+    }
+    
+    func getRepos(username: String, completion: @escaping ([Repo]?) -> Void) {
+        client.get(url: Constants.Api.getReposUrl(username: username)) { (data, error) in
+            var repos: [Repo]?
+            
+            if let data = data {
+                do {
+                    if let jsonArray = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.mutableContainers) as? [[String: Any]] {
+                        repos = Repo.from(jsonArray: jsonArray)
+                    }
+                } catch {
+                    Logger.printDebug(tag: self.logTag, error.localizedDescription)
+                }
+            }
+            
+            if let error = error {
+                Logger.printDebug(tag: self.logTag, error.localizedDescription)
+            }
+            
+            completion(repos)
         }
     }
 }

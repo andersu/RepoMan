@@ -1,34 +1,31 @@
 //
-//  GithubInteractor.swift
+//  ReposInteractor.swift
 //  RepoMan
 //
-//  Created by Anders Ullnæss on 11/01/17.
+//  Created by Anders Ullnæss on 21/01/17.
 //  Copyright (c) 2017 Anders Ullnæss. All rights reserved.
 //
 
 import UIKit
 
-protocol GithubInteractorOutput {
+protocol ReposInteractorOutput {
     func fetched(repos: [Repo])
     func failedToFetchRepos()
 }
 
-class GithubInteractor {
+class ReposInteractor {
     
-    var output: GithubInteractorOutput!
+    var output: ReposInteractorOutput!
     var githubService: GithubService
     
     init(githubService: GithubService) {
         self.githubService = githubService
     }
-    
-    // MARK: Business logic
-    
 }
 
-extension GithubInteractor: GithubViewControllerOutput {
-    func shouldGetRepos() {
-        githubService.getRepos() { (repos) in
+extension ReposInteractor: ReposViewControllerOutput {
+    func shouldGetRepos(username: String) {
+        githubService.getRepos(username: username) { (repos) in
             if let repos = repos {
                 self.output.fetched(repos: repos)
             } else {
@@ -36,4 +33,5 @@ extension GithubInteractor: GithubViewControllerOutput {
             }
         }
     }
+
 }

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserView" customModule="RepoMan" customModuleProvider="target">
+            <connections>
+                <outlet property="nameLabel" destination="NcP-tU-4pz" id="Rzi-L7-yUZ"/>
+                <outlet property="publicReposLabel" destination="lhb-BY-0kj" id="Z9r-Ho-YpO"/>
+                <outlet property="usernameLabel" destination="mGg-dg-Ork" id="8ck-MV-fwA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4Zq-fd-hao">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afa-8d-ugB">
+                    <rect key="frame" x="16" y="16" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anders Ullnæss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcP-tU-4pz">
+                    <rect key="frame" x="16" y="37" width="343" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHP-v7-cUG">
+                    <rect key="frame" x="16" y="77" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="andersu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGg-dg-Ork">
+                    <rect key="frame" x="16" y="98" width="343" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public repos:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PX-3i-sOd">
+                    <rect key="frame" x="16" y="138" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhb-BY-0kj">
+                    <rect key="frame" x="16" y="159" width="343" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiL-eX-de2">
+                    <rect key="frame" x="16" y="199" width="343" height="50"/>
+                    <color key="backgroundColor" red="0.49803921568627452" green="0.0" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="pKX-bD-0cR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="See repos">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="seeReposButtonClicked:" destination="-1" eventType="touchUpInside" id="byI-dT-xen"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mGg-dg-Ork" firstAttribute="leading" secondItem="4Zq-fd-hao" secondAttribute="leading" constant="16" id="10m-Dm-nCC"/>
+                <constraint firstAttribute="trailing" secondItem="xiL-eX-de2" secondAttribute="trailing" constant="16" id="3cY-Oe-yRO"/>
+                <constraint firstItem="xiL-eX-de2" firstAttribute="leading" secondItem="4Zq-fd-hao" secondAttribute="leading" constant="16" id="4LQ-ya-mqa"/>
+                <constraint firstItem="8PX-3i-sOd" firstAttribute="leading" secondItem="4Zq-fd-hao" secondAttribute="leading" constant="16" id="4ZV-4C-KSj"/>
+                <constraint firstAttribute="trailing" secondItem="mHP-v7-cUG" secondAttribute="trailing" constant="16" id="63X-rQ-aiN"/>
+                <constraint firstItem="NcP-tU-4pz" firstAttribute="top" secondItem="afa-8d-ugB" secondAttribute="bottom" id="BBP-Mk-qpt"/>
+                <constraint firstAttribute="trailing" secondItem="afa-8d-ugB" secondAttribute="trailing" constant="16" id="Brd-Jx-5wV"/>
+                <constraint firstAttribute="trailing" secondItem="lhb-BY-0kj" secondAttribute="trailing" constant="16" id="CJ8-qH-I3F"/>
+                <constraint firstItem="afa-8d-ugB" firstAttribute="leading" secondItem="4Zq-fd-hao" secondAttribute="leading" constant="16" id="DCA-F2-qv3"/>
+                <constraint firstItem="mHP-v7-cUG" firstAttribute="top" secondItem="NcP-tU-4pz" secondAttribute="bottom" constant="16" id="DoV-S3-0Os"/>
+                <constraint firstItem="afa-8d-ugB" firstAttribute="top" secondItem="4Zq-fd-hao" secondAttribute="top" constant="16" id="Hjj-vX-oOU"/>
+                <constraint firstAttribute="trailing" secondItem="mGg-dg-Ork" secondAttribute="trailing" constant="16" id="Ke5-Iv-gD8"/>
+                <constraint firstItem="xiL-eX-de2" firstAttribute="top" secondItem="lhb-BY-0kj" secondAttribute="bottom" constant="16" id="L34-DN-c7J"/>
+                <constraint firstAttribute="trailing" secondItem="8PX-3i-sOd" secondAttribute="trailing" constant="16" id="PDh-P1-8AZ"/>
+                <constraint firstAttribute="trailing" secondItem="NcP-tU-4pz" secondAttribute="trailing" constant="16" id="Uru-cG-nqm"/>
+                <constraint firstItem="mGg-dg-Ork" firstAttribute="top" secondItem="mHP-v7-cUG" secondAttribute="bottom" id="a8e-zQ-lTU"/>
+                <constraint firstItem="8PX-3i-sOd" firstAttribute="top" secondItem="mGg-dg-Ork" secondAttribute="bottom" constant="16" id="f1p-Qd-MG7"/>
+                <constraint firstItem="lhb-BY-0kj" firstAttribute="leading" secondItem="4Zq-fd-hao" secondAttribute="leading" constant="16" id="gpe-8k-MKQ"/>
+                <constraint firstItem="lhb-BY-0kj" firstAttribute="top" secondItem="8PX-3i-sOd" secondAttribute="bottom" id="taH-E3-oeN"/>
+                <constraint firstItem="NcP-tU-4pz" firstAttribute="leading" secondItem="4Zq-fd-hao" secondAttribute="leading" constant="16" id="utq-ZB-cWe"/>
+                <constraint firstItem="mHP-v7-cUG" firstAttribute="leading" secondItem="4Zq-fd-hao" secondAttribute="leading" constant="16" id="wYI-1c-o3u"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

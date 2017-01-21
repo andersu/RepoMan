@@ -1,23 +1,22 @@
 //
-//  GithubView.swift
+//  ReposView.swift
 //  RepoMan
 //
-//  Created by Anders Ullnæss on 11/01/17.
-//  Copyright © 2017 Anders Ullnæss. All rights reserved.
+//  Created by Anders Ullnæss on 21/01/17.
+//  Copyright (c) 2017 Anders Ullnæss. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-protocol GithubViewDelegate: class {
+protocol ReposViewDelegate: class {
     func selected(repo: Repo)
 }
 
-class GithubView: NibLoadingView {
+class ReposView: NibLoadingView {
     fileprivate var repoCellIdentifier = "RepoCell"
-    fileprivate var viewModel = GithubViewModel()
+    fileprivate var viewModel = ReposViewModel()
     
-    weak var delegate: GithubViewDelegate!
+    weak var delegate: ReposViewDelegate!
     
     @IBOutlet weak var reposTableView: UITableView!
     
@@ -26,8 +25,9 @@ class GithubView: NibLoadingView {
         initReposTableView()
     }
     
-    func bindTo(viewModel: GithubViewModel) {
+    func showRepos(viewModel: ReposViewModel) {
         self.viewModel = viewModel
+        reposTableView.reloadData()
     }
     
     private func initReposTableView() {
@@ -41,7 +41,7 @@ class GithubView: NibLoadingView {
     }
 }
 
-extension GithubView: UITableViewDataSource {
+extension ReposView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.repos.count
     }
@@ -51,11 +51,13 @@ extension GithubView: UITableViewDataSource {
         let repoCell = tableView.dequeueReusableCell(withIdentifier: repoCellIdentifier) as! RepoCell
         repoCell.bindTo(repo: repo)
         
+        repoCell.selectionStyle = .none;
+        
         return repoCell
     }
 }
 
-extension GithubView: UITableViewDelegate {
+extension ReposView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let repo = viewModel.repos[indexPath.row]
         delegate.selected(repo: repo)
