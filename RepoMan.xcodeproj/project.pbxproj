@@ -54,6 +54,7 @@
 		9FFA30191E3396860047B5A5 /* ReposView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA30181E3396860047B5A5 /* ReposView.xib */; };
 		9FFA301C1E3397890047B5A5 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA301A1E3397890047B5A5 /* RepoCell.swift */; };
 		9FFA301D1E3397890047B5A5 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA301B1E3397890047B5A5 /* RepoCell.xib */; };
+		9FFA30201E33A0DD0047B5A5 /* Date+Formats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA301F1E33A0DD0047B5A5 /* Date+Formats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		9FFA30181E3396860047B5A5 /* ReposView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReposView.xib; sourceTree = "<group>"; };
 		9FFA301A1E3397890047B5A5 /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		9FFA301B1E3397890047B5A5 /* RepoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
+		9FFA301F1E33A0DD0047B5A5 /* Date+Formats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Formats.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				9FE6AF021E26A961007F535A /* Views */,
 				9F5D2F891E33820600738CDA /* Network */,
 				9F5D2F901E3383F600738CDA /* Utils */,
+				9FFA301E1E33A0C00047B5A5 /* Extensions */,
 				9FE6AF0B1E26AB31007F535A /* ThirdParty */,
 			);
 			path = RepoMan;
@@ -329,6 +332,14 @@
 				9FFA30181E3396860047B5A5 /* ReposView.xib */,
 			);
 			path = Repos;
+			sourceTree = "<group>";
+		};
+		9FFA301E1E33A0C00047B5A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA301F1E33A0DD0047B5A5 /* Date+Formats.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +479,7 @@
 				9FE6AF1C1E26B11B007F535A /* RepoConfigurator.swift in Sources */,
 				9FFA30051E338BB90047B5A5 /* UserViewController.swift in Sources */,
 				9FFA30151E3394190047B5A5 /* ReposView.swift in Sources */,
+				9FFA30201E33A0DD0047B5A5 /* Date+Formats.swift in Sources */,
 				9FE6AF1D1E26B11B007F535A /* RepoInteractor.swift in Sources */,
 				9FFA2FF41E3388C90047B5A5 /* UserSearchViewController.swift in Sources */,
 				9FE6AF241E26B132007F535A /* RepoView.swift in Sources */,

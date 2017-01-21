@@ -28,6 +28,7 @@ class RepoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = viewModel.title
         repoView.bindTo(viewModel: viewModel)
     }
 }
