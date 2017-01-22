@@ -9,20 +9,17 @@
 import UIKit
 
 protocol RepoPresenterOutput: class {
-    
 }
 
 class RepoPresenter {
-    
+
     weak var output: RepoPresenterOutput!
     var viewModel: RepoViewModel
-    
+
     init(viewModel: RepoViewModel) {
         self.viewModel = viewModel
     }
-    
 }
 
 extension RepoPresenter: RepoInteractorOutput {
-    
 }

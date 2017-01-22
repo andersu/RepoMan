@@ -15,9 +15,9 @@ protocol UserInteractorOutput {
 
 class UserInteractor {
     var output: UserInteractorOutput!
-    
+
     var githubService: GithubService
-    
+
     init(githubService: GithubService) {
         self.githubService = githubService
     }
@@ -25,7 +25,7 @@ class UserInteractor {
 
 extension UserInteractor: UserViewControllerOutput {
     func shouldFetchUser(username: String) {
-        githubService.getUser(username: username) { (user) in
+        githubService.getUser(username: username) { user in
             if let user = user {
                 self.output.fetched(user: user)
             } else {

@@ -15,33 +15,32 @@ protocol UserViewControllerOutput {
 class UserViewController: UIViewController {
     var output: UserViewControllerOutput!
     var router: UserRouter!
-    
+
     @IBOutlet var userView: UserView! // TODO: hook this up with view in storyboard
-    
+
     var username: String! // Is set by router of previous scene
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         UserConfigurator.sharedInstance.configure(viewController: self)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         output.shouldFetchUser(username: username)
-        
+
         userView.delegate = self
     }
 }
-
 
 extension UserViewController: UserPresenterOutput {
     func present(viewModel: UserViewModel) {
         navigationItem.title = viewModel.title
         userView.present(viewModel: viewModel)
     }
-    
+
     func showFailedToFetchUserErrorMessage() {
-        // TODO
+        // TODO:
     }
 }
 

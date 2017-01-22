@@ -11,7 +11,7 @@ import UIKit
 
 class RepoCell: NibDesignableTableViewCell {
     @IBOutlet weak var repoNameLabel: UILabel!
-    
+
     func bindTo(repo: Repo) {
         repoNameLabel.text = repo.name
     }

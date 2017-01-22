@@ -14,10 +14,10 @@ protocol UserSearchViewDelegate: class {
 
 class UserSearchView: NibLoadingView {
     weak var delegate: UserSearchViewDelegate!
-    
+
     @IBOutlet weak var usernameTextField: UITextField!
-    
-    @IBAction func searchButtonClicked(_ sender: Any) {
+
+    @IBAction func searchButtonClicked(_: Any) {
         if let username = usernameTextField.text {
             delegate.searchButtonClicked(username: username)
         }

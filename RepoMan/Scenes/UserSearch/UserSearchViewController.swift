@@ -9,29 +9,26 @@
 import UIKit
 
 protocol UserSearchViewControllerOutput {
-    
 }
 
 class UserSearchViewController: UIViewController {
-    
+
     var output: UserSearchViewControllerOutput!
     var router: UserSearchRouter!
     @IBOutlet var userSearchView: UserSearchView! // TODO: rename and hook this up with view in storyboard
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         UserSearchConfigurator.sharedInstance.configure(viewController: self)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         userSearchView.delegate = self
     }
 }
 
-
 extension UserSearchViewController: UserSearchPresenterOutput {
-    
 }
 
 extension UserSearchViewController: UserSearchViewDelegate {

@@ -14,10 +14,10 @@ protocol UserPresenterOutput: class {
 }
 
 class UserPresenter {
-    
+
     weak var output: UserPresenterOutput!
     var viewModel: UserViewModel
-    
+
     init(viewModel: UserViewModel) {
         self.viewModel = viewModel
     }
@@ -30,7 +30,7 @@ extension UserPresenter: UserInteractorOutput {
             self.output.present(viewModel: self.viewModel)
         }
     }
-    
+
     func failedToFetchUser() {
         DispatchQueue.main.async {
             self.output.showFailedToFetchUserErrorMessage()

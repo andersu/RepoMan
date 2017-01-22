@@ -9,7 +9,6 @@
 import UIKit
 
 protocol UserSearchInteractorOutput {
-
 }
 
 class UserSearchInteractor {
@@ -17,5 +16,4 @@ class UserSearchInteractor {
 }
 
 extension UserSearchInteractor: UserSearchViewControllerOutput {
-
 }

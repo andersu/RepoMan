@@ -13,13 +13,13 @@ protocol UserSearchRouterInput {
 }
 
 class UserSearchRouter: UserSearchRouterInput {
-    
+
     weak var viewController: UserSearchViewController!
-    
+
     init(viewController: UserSearchViewController) {
         self.viewController = viewController
     }
-    
+
     func goToUser(username: String) {
         if let userViewController = viewController.storyboard?.instantiateViewController(withIdentifier: "UserViewController") as? UserViewController {
             userViewController.username = username

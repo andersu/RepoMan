@@ -9,13 +9,12 @@
 import UIKit
 
 protocol RepoRouterInput {
-    
 }
 
 class RepoRouter: RepoRouterInput {
-    
+
     weak var viewController: RepoViewController!
-    
+
     init(viewController: RepoViewController) {
         self.viewController = viewController
     }

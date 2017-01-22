@@ -163,9 +163,9 @@
 				9FFA2FE91E3388C90047B5A5 /* UserSearchInteractor.swift */,
 				9FFA2FEA1E3388C90047B5A5 /* UserSearchPresenter.swift */,
 				9FFA2FEB1E3388C90047B5A5 /* UserSearchRouter.swift */,
-				9FFA2FEC1E3388C90047B5A5 /* UserSearchView.swift */,
-				9FFA2FED1E3388C90047B5A5 /* UserSearchViewController.swift */,
 				9FFA2FEE1E3388C90047B5A5 /* UserSearchViewModel.swift */,
+				9FFA2FED1E3388C90047B5A5 /* UserSearchViewController.swift */,
+				9FFA2FEC1E3388C90047B5A5 /* UserSearchView.swift */,
 				9FFA2FF61E3388F70047B5A5 /* UserSearchView.xib */,
 			);
 			path = UserSearch;
@@ -320,8 +320,6 @@
 		9FFA30091E3394030047B5A5 /* Repos */ = {
 			isa = PBXGroup;
 			children = (
-				9FFA301A1E3397890047B5A5 /* RepoCell.swift */,
-				9FFA301B1E3397890047B5A5 /* RepoCell.xib */,
 				9FFA300A1E3394190047B5A5 /* ReposConfigurator.swift */,
 				9FFA300B1E3394190047B5A5 /* ReposInteractor.swift */,
 				9FFA300C1E3394190047B5A5 /* ReposPresenter.swift */,
@@ -330,6 +328,8 @@
 				9FFA300F1E3394190047B5A5 /* ReposViewController.swift */,
 				9FFA30101E3394190047B5A5 /* ReposViewModel.swift */,
 				9FFA30181E3396860047B5A5 /* ReposView.xib */,
+				9FFA301A1E3397890047B5A5 /* RepoCell.swift */,
+				9FFA301B1E3397890047B5A5 /* RepoCell.xib */,
 			);
 			path = Repos;
 			sourceTree = "<group>";
@@ -352,6 +352,7 @@
 				9FE6AEC61E26A68A007F535A /* Sources */,
 				9FE6AEC71E26A68A007F535A /* Frameworks */,
 				9FE6AEC81E26A68A007F535A /* Resources */,
+				9FFA30211E354F750047B5A5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -446,6 +447,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9FFA30211E354F750047B5A5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/swiftformat ${SRCROOT}/RepoMan/";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9FE6AEC61E26A68A007F535A /* Sources */ = {

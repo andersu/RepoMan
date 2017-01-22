@@ -9,26 +9,17 @@
 import UIKit
 
 protocol UserSearchPresenterOutput: class {
-    
 }
 
 class UserSearchPresenter {
-    
+
     weak var output: UserSearchPresenterOutput!
     var viewModel: UserSearchViewModel
-    
+
     init(viewModel: UserSearchViewModel) {
         self.viewModel = viewModel
     }
-    
 }
 
 extension UserSearchPresenter: UserSearchInteractorOutput {
-    func fetched(user: User) {
-        
-    }
-    
-    func failedToFetchUser() {
-        
-    }
 }

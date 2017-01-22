@@ -14,14 +14,13 @@ protocol ReposPresenterOutput: class {
 }
 
 class ReposPresenter {
-    
+
     weak var output: ReposPresenterOutput!
     var viewModel: ReposViewModel
-    
+
     init(viewModel: ReposViewModel) {
         self.viewModel = viewModel
     }
-    
 }
 
 extension ReposPresenter: ReposInteractorOutput {
@@ -31,7 +30,7 @@ extension ReposPresenter: ReposInteractorOutput {
             self.output.showRepos(viewModel: self.viewModel)
         }
     }
-    
+
     func failedToFetchRepos() {
         DispatchQueue.main.async {
             self.output.showFailedToFetchReposErrorMessage()

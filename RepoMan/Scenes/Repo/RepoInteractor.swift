@@ -9,18 +9,14 @@
 import UIKit
 
 protocol RepoInteractorOutput {
-    
 }
 
 class RepoInteractor {
-    
-    var output: RepoInteractorOutput!
-    
-    // MARK: Business logic
-    
 
+    var output: RepoInteractorOutput!
+
+    // MARK: Business logic
 }
 
 extension RepoInteractor: RepoViewControllerOutput {
-    
 }

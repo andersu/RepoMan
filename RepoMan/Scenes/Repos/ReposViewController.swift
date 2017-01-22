@@ -13,36 +13,34 @@ protocol ReposViewControllerOutput {
 }
 
 class ReposViewController: UIViewController {
-    
+
     var output: ReposViewControllerOutput!
     var router: ReposRouter!
-    
+
     var username: String! // Is set by router of previous scene
-    
+
     @IBOutlet var reposView: ReposView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         ReposConfigurator.sharedInstance.configure(viewController: self)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         reposView.delegate = self
-        
+
         output.shouldGetRepos(username: username)
     }
 }
-
 
 extension ReposViewController: ReposPresenterOutput {
     func showRepos(viewModel: ReposViewModel) {
         reposView.showRepos(viewModel: viewModel)
     }
-    
+
     func showFailedToFetchReposErrorMessage() {
-        
     }
 }
 

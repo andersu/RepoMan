@@ -14,10 +14,10 @@ protocol ReposInteractorOutput {
 }
 
 class ReposInteractor {
-    
+
     var output: ReposInteractorOutput!
     var githubService: GithubService
-    
+
     init(githubService: GithubService) {
         self.githubService = githubService
     }
@@ -25,7 +25,7 @@ class ReposInteractor {
 
 extension ReposInteractor: ReposViewControllerOutput {
     func shouldGetRepos(username: String) {
-        githubService.getRepos(username: username) { (repos) in
+        githubService.getRepos(username: username) { repos in
             if let repos = repos {
                 self.output.fetched(repos: repos)
             } else {
@@ -33,5 +33,4 @@ extension ReposInteractor: ReposViewControllerOutput {
             }
         }
     }
-
 }
