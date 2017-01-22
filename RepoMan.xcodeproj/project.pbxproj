@@ -26,8 +26,6 @@
 		9FE6AF1F1E26B11B007F535A /* RepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF191E26B11B007F535A /* RepoRouter.swift */; };
 		9FE6AF201E26B11B007F535A /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF1A1E26B11B007F535A /* RepoViewController.swift */; };
 		9FE6AF211E26B11B007F535A /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF1B1E26B11B007F535A /* RepoViewModel.swift */; };
-		9FE6AF241E26B132007F535A /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AF231E26B132007F535A /* RepoView.swift */; };
-		9FE6AF261E26B148007F535A /* RepoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AF251E26B148007F535A /* RepoView.xib */; };
 		9FFA2FEF1E3388C90047B5A5 /* UserSearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA2FE81E3388C90047B5A5 /* UserSearchConfigurator.swift */; };
 		9FFA2FF01E3388C90047B5A5 /* UserSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA2FE91E3388C90047B5A5 /* UserSearchInteractor.swift */; };
 		9FFA2FF11E3388C90047B5A5 /* UserSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA2FEA1E3388C90047B5A5 /* UserSearchPresenter.swift */; };
@@ -55,6 +53,8 @@
 		9FFA301C1E3397890047B5A5 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA301A1E3397890047B5A5 /* RepoCell.swift */; };
 		9FFA301D1E3397890047B5A5 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA301B1E3397890047B5A5 /* RepoCell.xib */; };
 		9FFA30201E33A0DD0047B5A5 /* Date+Formats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA301F1E33A0DD0047B5A5 /* Date+Formats.swift */; };
+		9FFA30241E3553030047B5A5 /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA30221E3553030047B5A5 /* RepoView.swift */; };
+		9FFA30251E3553030047B5A5 /* RepoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA30231E3553030047B5A5 /* RepoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +91,6 @@
 		9FE6AF191E26B11B007F535A /* RepoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoRouter.swift; sourceTree = "<group>"; };
 		9FE6AF1A1E26B11B007F535A /* RepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
 		9FE6AF1B1E26B11B007F535A /* RepoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
-		9FE6AF231E26B132007F535A /* RepoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
-		9FE6AF251E26B148007F535A /* RepoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoView.xib; sourceTree = "<group>"; };
 		9FFA2FE81E3388C90047B5A5 /* UserSearchConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchConfigurator.swift; sourceTree = "<group>"; };
 		9FFA2FE91E3388C90047B5A5 /* UserSearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchInteractor.swift; sourceTree = "<group>"; };
 		9FFA2FEA1E3388C90047B5A5 /* UserSearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchPresenter.swift; sourceTree = "<group>"; };
@@ -120,6 +118,8 @@
 		9FFA301A1E3397890047B5A5 /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		9FFA301B1E3397890047B5A5 /* RepoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 		9FFA301F1E33A0DD0047B5A5 /* Date+Formats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Formats.swift"; sourceTree = "<group>"; };
+		9FFA30221E3553030047B5A5 /* RepoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
+		9FFA30231E3553030047B5A5 /* RepoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,24 +282,16 @@
 		9FE6AF151E26B0FD007F535A /* Repo */ = {
 			isa = PBXGroup;
 			children = (
-				9FE6AF221E26B120007F535A /* View */,
 				9FE6AF161E26B11B007F535A /* RepoConfigurator.swift */,
 				9FE6AF171E26B11B007F535A /* RepoInteractor.swift */,
 				9FE6AF181E26B11B007F535A /* RepoPresenter.swift */,
 				9FE6AF191E26B11B007F535A /* RepoRouter.swift */,
 				9FE6AF1A1E26B11B007F535A /* RepoViewController.swift */,
 				9FE6AF1B1E26B11B007F535A /* RepoViewModel.swift */,
+				9FFA30221E3553030047B5A5 /* RepoView.swift */,
+				9FFA30231E3553030047B5A5 /* RepoView.xib */,
 			);
 			path = Repo;
-			sourceTree = "<group>";
-		};
-		9FE6AF221E26B120007F535A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9FE6AF231E26B132007F535A /* RepoView.swift */,
-				9FE6AF251E26B148007F535A /* RepoView.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		9FFA2FF81E338B9A0047B5A5 /* User */ = {
@@ -432,9 +424,9 @@
 				9FFA2FF71E3388F70047B5A5 /* UserSearchView.xib in Resources */,
 				9FE6AED81E26A68A007F535A /* LaunchScreen.storyboard in Resources */,
 				9FFA301D1E3397890047B5A5 /* RepoCell.xib in Resources */,
-				9FE6AF261E26B148007F535A /* RepoView.xib in Resources */,
 				9FE6AED51E26A68A007F535A /* Assets.xcassets in Resources */,
 				9FE6AED31E26A68A007F535A /* Main.storyboard in Resources */,
+				9FFA30251E3553030047B5A5 /* RepoView.xib in Resources */,
 				9FFA30081E338F5E0047B5A5 /* UserView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F5D2F8D1E33823E00738CDA /* Constants.swift in Sources */,
+				9FFA30241E3553030047B5A5 /* RepoView.swift in Sources */,
 				9FE6AF0E1E26AB67007F535A /* NibDesignable.swift in Sources */,
 				9FFA30001E338BB90047B5A5 /* UserConfigurator.swift in Sources */,
 				9FFA30031E338BB90047B5A5 /* UserRouter.swift in Sources */,
@@ -499,7 +492,6 @@
 				9FFA30201E33A0DD0047B5A5 /* Date+Formats.swift in Sources */,
 				9FE6AF1D1E26B11B007F535A /* RepoInteractor.swift in Sources */,
 				9FFA2FF41E3388C90047B5A5 /* UserSearchViewController.swift in Sources */,
-				9FE6AF241E26B132007F535A /* RepoView.swift in Sources */,
 				9FFA30021E338BB90047B5A5 /* UserPresenter.swift in Sources */,
 				9FE6AF1E1E26B11B007F535A /* RepoPresenter.swift in Sources */,
 				9FFA2FF51E3388C90047B5A5 /* UserSearchViewModel.swift in Sources */,
