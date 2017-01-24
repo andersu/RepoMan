@@ -9,6 +9,7 @@
 import UIKit
 
 protocol UserSearchPresenterOutput: class {
+    func updateSearchButton(viewModel: UserSearchViewModel)
 }
 
 class UserSearchPresenter {
@@ -22,4 +23,10 @@ class UserSearchPresenter {
 }
 
 extension UserSearchPresenter: UserSearchInteractorOutput {
+    func searchTextChanged(newText: String?) {
+        DispatchQueue.main.async {
+            self.viewModel.searchText = newText
+            self.output.updateSearchButton(viewModel: self.viewModel)
+        }
+    }
 }

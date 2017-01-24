@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Constants {
     struct HttpMethods {
@@ -23,5 +24,10 @@ enum Constants {
         static func getReposUrl(username: String) -> URL {
             return URL(string: "\(baseUrl)/users/\(username)/repos")!
         }
+    }
+
+    struct Alpha {
+        static let disabled: CGFloat = 0.5
+        static let enabled: CGFloat = 1.0
     }
 }

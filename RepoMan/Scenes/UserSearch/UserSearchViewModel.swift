@@ -9,4 +9,25 @@
 import UIKit
 
 class UserSearchViewModel {
+    var searchText: String?
+
+    var searchButtonIsEnabled: Bool {
+        guard let searchText = searchText else {
+            return false
+        }
+
+        return !searchText.isEmpty
+    }
+
+    var searchButtonAlpha: CGFloat {
+        guard let searchText = searchText else {
+            return Constants.Alpha.disabled
+        }
+
+        if searchText.isEmpty {
+            return Constants.Alpha.disabled
+        }
+
+        return Constants.Alpha.enabled
+    }
 }

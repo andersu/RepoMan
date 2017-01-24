@@ -19,13 +19,25 @@ class UserView: NibLoadingView {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var publicReposLabel: UILabel!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        clearTexts()
+    }
+
+    @IBAction func seeReposButtonClicked(_: Any) {
+        delegate.seeReposButtonClicked()
+    }
+
     func present(viewModel: UserViewModel) {
         nameLabel.text = viewModel.nameLabelText
         usernameLabel.text = viewModel.usernameLabelText
         publicReposLabel.text = viewModel.publicReposLabelText
     }
 
-    @IBAction func seeReposButtonClicked(_: Any) {
-        delegate.seeReposButtonClicked()
+    // Clear the dummy texts from the xib file
+    private func clearTexts() {
+        nameLabel.text = nil
+        usernameLabel.text = nil
+        publicReposLabel.text = nil
     }
 }

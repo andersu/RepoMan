@@ -9,6 +9,7 @@
 import UIKit
 
 protocol UserSearchViewControllerOutput {
+    func searchTextChanged(newText: String?)
 }
 
 class UserSearchViewController: UIViewController {
@@ -29,9 +30,16 @@ class UserSearchViewController: UIViewController {
 }
 
 extension UserSearchViewController: UserSearchPresenterOutput {
+    func updateSearchButton(viewModel: UserSearchViewModel) {
+        userSearchView.updateSearchButton(viewModel: viewModel)
+    }
 }
 
 extension UserSearchViewController: UserSearchViewDelegate {
+    internal func searchTextChanged(newText: String?) {
+        output.searchTextChanged(newText: newText)
+    }
+
     func searchButtonClicked(username: String) {
         router.goToUser(username: username)
     }

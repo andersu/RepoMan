@@ -9,6 +9,7 @@
 import UIKit
 
 protocol UserSearchInteractorOutput {
+    func searchTextChanged(newText: String?)
 }
 
 class UserSearchInteractor {
@@ -16,4 +17,7 @@ class UserSearchInteractor {
 }
 
 extension UserSearchInteractor: UserSearchViewControllerOutput {
+    func searchTextChanged(newText: String?) {
+        output.searchTextChanged(newText: newText)
+    }
 }
