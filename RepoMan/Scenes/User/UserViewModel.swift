@@ -42,4 +42,16 @@ class UserViewModel {
     var seeReposButtonIsEnabled: Bool {
         return user != nil
     }
+
+    var avatarUrl: URL? {
+        if let urlString = user?.avatarUrl {
+            return URL(string: urlString)
+        }
+
+        return nil
+    }
+
+    var avatarCacheKey: String? {
+        return user?.avatarUrl
+    }
 }

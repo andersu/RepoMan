@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol UserViewDelegate: class {
     func seeReposButtonClicked()
@@ -19,6 +20,7 @@ class UserView: NibLoadingView {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var publicReposLabel: UILabel!
     @IBOutlet weak var seeReposButton: UIButton!
+    @IBOutlet weak var avatarImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +38,10 @@ class UserView: NibLoadingView {
 
         seeReposButton.alpha = viewModel.seeReposButtonAlpha
         seeReposButton.isEnabled = viewModel.seeReposButtonIsEnabled
+
+        if let avatarUrl = viewModel.avatarUrl {
+            avatarImageView.kf.setImage(with: ImageResource(downloadURL: avatarUrl, cacheKey: viewModel.avatarCacheKey), placeholder: nil, options: nil)
+        }
     }
 
     // Clear the dummy texts from the xib file

@@ -14,18 +14,23 @@ class User {
     var username: String
     var name: String
     var publicRepos: Int
+    var avatarUrl: String?
 
-    init(username: String, name: String, publicRepos: Int) {
+    init(username: String, name: String, publicRepos: Int, avatarUrl: String?) {
         self.username = username
         self.name = name
         self.publicRepos = publicRepos
+        self.avatarUrl = avatarUrl
     }
 
     class func from(json: [String: Any]) -> User? {
         if let username = json["login"] as? String,
             let name = json["name"] as? String,
             let publicRepos = json["public_repos"] as? Int {
-            return User(username: username, name: name, publicRepos: publicRepos)
+
+            let avatarUrl = json["avatar_url"] as? String
+
+            return User(username: username, name: name, publicRepos: publicRepos, avatarUrl: avatarUrl)
         }
 
         Logger.printDebug(tag: logTag, "Unable to parse User from json")

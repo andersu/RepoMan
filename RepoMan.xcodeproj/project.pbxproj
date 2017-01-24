@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		528A04E0F60489CA4492196D /* Pods_RepoMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D73EAEA337B02632924DCEF /* Pods_RepoMan.framework */; };
 		9F5D2F8B1E33822100738CDA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D2F8A1E33822100738CDA /* HttpClient.swift */; };
 		9F5D2F8D1E33823E00738CDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D2F8C1E33823E00738CDA /* Constants.swift */; };
 		9F5D2F8F1E3383AD00738CDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D2F8E1E3383AD00738CDA /* User.swift */; };
@@ -61,6 +62,7 @@
 		9FFA30201E33A0DD0047B5A5 /* Date+Formats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA301F1E33A0DD0047B5A5 /* Date+Formats.swift */; };
 		9FFA30241E3553030047B5A5 /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA30221E3553030047B5A5 /* RepoView.swift */; };
 		9FFA30251E3553030047B5A5 /* RepoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFA30231E3553030047B5A5 /* RepoView.xib */; };
+		DD6DB85AC20AD4B2DF169964 /* Pods_RepoManTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA7F77766B727245BD9CEA4 /* Pods_RepoManTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33E77C44EE220FAD722DC65F /* Pods-RepoManTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepoManTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RepoManTests/Pods-RepoManTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3D73EAEA337B02632924DCEF /* Pods_RepoMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepoMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D653088ABB27D5795BCA7AE /* Pods-RepoMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepoMan.release.xcconfig"; path = "Pods/Target Support Files/Pods-RepoMan/Pods-RepoMan.release.xcconfig"; sourceTree = "<group>"; };
+		7D6AC3B2004B665F37992649 /* Pods-RepoMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepoMan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RepoMan/Pods-RepoMan.debug.xcconfig"; sourceTree = "<group>"; };
 		9F5D2F8A1E33822100738CDA /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		9F5D2F8C1E33823E00738CDA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F5D2F8E1E3383AD00738CDA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -132,6 +138,8 @@
 		9FFA301F1E33A0DD0047B5A5 /* Date+Formats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Formats.swift"; sourceTree = "<group>"; };
 		9FFA30221E3553030047B5A5 /* RepoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
 		9FFA30231E3553030047B5A5 /* RepoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoView.xib; sourceTree = "<group>"; };
+		AA9B27661F865197B9B2D81D /* Pods-RepoManTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepoManTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RepoManTests/Pods-RepoManTests.release.xcconfig"; sourceTree = "<group>"; };
+		CBA7F77766B727245BD9CEA4 /* Pods_RepoManTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepoManTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528A04E0F60489CA4492196D /* Pods_RepoMan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,12 +155,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6DB85AC20AD4B2DF169964 /* Pods_RepoManTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33B9FCE81B3A7B2782904296 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D73EAEA337B02632924DCEF /* Pods_RepoMan.framework */,
+				CBA7F77766B727245BD9CEA4 /* Pods_RepoManTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B69C7134C8D1EADB7A2F8B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D6AC3B2004B665F37992649 /* Pods-RepoMan.debug.xcconfig */,
+				5D653088ABB27D5795BCA7AE /* Pods-RepoMan.release.xcconfig */,
+				33E77C44EE220FAD722DC65F /* Pods-RepoManTests.debug.xcconfig */,
+				AA9B27661F865197B9B2D81D /* Pods-RepoManTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9F5D2F891E33820600738CDA /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +239,8 @@
 				9FE6AECC1E26A68A007F535A /* RepoMan */,
 				9FE6AEE11E26A68A007F535A /* RepoManTests */,
 				9FE6AECB1E26A68A007F535A /* Products */,
+				8B69C7134C8D1EADB7A2F8B4 /* Pods */,
+				33B9FCE81B3A7B2782904296 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -375,10 +407,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FE6AEE71E26A68A007F535A /* Build configuration list for PBXNativeTarget "RepoMan" */;
 			buildPhases = (
+				F932F728756281C75EB87A95 /* [CP] Check Pods Manifest.lock */,
 				9FE6AEC61E26A68A007F535A /* Sources */,
 				9FE6AEC71E26A68A007F535A /* Frameworks */,
 				9FE6AEC81E26A68A007F535A /* Resources */,
 				9FFA30211E354F750047B5A5 /* ShellScript */,
+				4EC0C30B3C2B28C1FED64955 /* [CP] Embed Pods Frameworks */,
+				D674E5073FC7C4358074501C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -393,9 +428,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FE6AEEA1E26A68A007F535A /* Build configuration list for PBXNativeTarget "RepoManTests" */;
 			buildPhases = (
+				3C93BE40EFC4232C3E37A209 /* [CP] Check Pods Manifest.lock */,
 				9FE6AEDA1E26A68A007F535A /* Sources */,
 				9FE6AEDB1E26A68A007F535A /* Frameworks */,
 				9FE6AEDC1E26A68A007F535A /* Resources */,
+				EE1F0D797080C1A362EF388B /* [CP] Embed Pods Frameworks */,
+				97AF10C8C9F627CF860E20FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -476,6 +514,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3C93BE40EFC4232C3E37A209 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4EC0C30B3C2B28C1FED64955 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RepoMan/Pods-RepoMan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97AF10C8C9F627CF860E20FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RepoManTests/Pods-RepoManTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9FFA30211E354F750047B5A5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,6 +571,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${SRCROOT}/swiftformat ${SRCROOT}/RepoMan/";
+		};
+		D674E5073FC7C4358074501C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RepoMan/Pods-RepoMan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE1F0D797080C1A362EF388B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RepoManTests/Pods-RepoManTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F932F728756281C75EB87A95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -676,6 +804,7 @@
 		};
 		9FE6AEE81E26A68A007F535A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D6AC3B2004B665F37992649 /* Pods-RepoMan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 643MJ6ZSSD;
@@ -689,6 +818,7 @@
 		};
 		9FE6AEE91E26A68A007F535A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D653088ABB27D5795BCA7AE /* Pods-RepoMan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 643MJ6ZSSD;
@@ -702,6 +832,7 @@
 		};
 		9FE6AEEB1E26A68A007F535A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E77C44EE220FAD722DC65F /* Pods-RepoManTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -717,6 +848,7 @@
 		};
 		9FE6AEEC1E26A68A007F535A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA9B27661F865197B9B2D81D /* Pods-RepoManTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
