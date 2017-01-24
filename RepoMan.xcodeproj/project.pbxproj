@@ -18,6 +18,9 @@
 		9FB770411E37D7B7003FAF75 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770401E37D7B7003FAF75 /* LoadingViewController.swift */; };
 		9FB770431E37D81E003FAF75 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770421E37D81E003FAF75 /* LoadingView.swift */; };
 		9FB770451E37D836003FAF75 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB770441E37D836003FAF75 /* LoadingView.xib */; };
+		9FB770491E37EAC7003FAF75 /* UserSearchInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770481E37EAC7003FAF75 /* UserSearchInteractorTest.swift */; };
+		9FB7704B1E37EC21003FAF75 /* UserSearchPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7704A1E37EC21003FAF75 /* UserSearchPresenterTest.swift */; };
+		9FB7704D1E37ED0C003FAF75 /* AsyncTestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7704C1E37ED0C003FAF75 /* AsyncTestUtil.swift */; };
 		9FE6AECE1E26A68A007F535A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AECD1E26A68A007F535A /* AppDelegate.swift */; };
 		9FE6AED31E26A68A007F535A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED11E26A68A007F535A /* Main.storyboard */; };
 		9FE6AED51E26A68A007F535A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED41E26A68A007F535A /* Assets.xcassets */; };
@@ -90,6 +93,9 @@
 		9FB770401E37D7B7003FAF75 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		9FB770421E37D81E003FAF75 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9FB770441E37D836003FAF75 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		9FB770481E37EAC7003FAF75 /* UserSearchInteractorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchInteractorTest.swift; sourceTree = "<group>"; };
+		9FB7704A1E37EC21003FAF75 /* UserSearchPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchPresenterTest.swift; sourceTree = "<group>"; };
+		9FB7704C1E37ED0C003FAF75 /* AsyncTestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTestUtil.swift; sourceTree = "<group>"; };
 		9FE6AECA1E26A68A007F535A /* RepoMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE6AECD1E26A68A007F535A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FE6AED21E26A68A007F535A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -233,6 +239,23 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
+		9FB770461E37EA98003FAF75 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9FB770471E37EAA8003FAF75 /* UserSearch */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9FB770471E37EAA8003FAF75 /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				9FB770481E37EAC7003FAF75 /* UserSearchInteractorTest.swift */,
+				9FB7704A1E37EC21003FAF75 /* UserSearchPresenterTest.swift */,
+			);
+			path = UserSearch;
+			sourceTree = "<group>";
+		};
 		9FE6AEC11E26A68A007F535A = {
 			isa = PBXGroup;
 			children = (
@@ -277,8 +300,10 @@
 		9FE6AEE11E26A68A007F535A /* RepoManTests */ = {
 			isa = PBXGroup;
 			children = (
+				9FB770461E37EA98003FAF75 /* Scenes */,
 				9FE6AEE21E26A68A007F535A /* RepoManTests.swift */,
 				9FE6AEE41E26A68A007F535A /* Info.plist */,
+				9FB7704C1E37ED0C003FAF75 /* AsyncTestUtil.swift */,
 			);
 			path = RepoManTests;
 			sourceTree = "<group>";
@@ -676,6 +701,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FE6AEE31E26A68A007F535A /* RepoManTests.swift in Sources */,
+				9FB770491E37EAC7003FAF75 /* UserSearchInteractorTest.swift in Sources */,
+				9FB7704D1E37ED0C003FAF75 /* AsyncTestUtil.swift in Sources */,
+				9FB7704B1E37EC21003FAF75 /* UserSearchPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
