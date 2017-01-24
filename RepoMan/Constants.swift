@@ -46,5 +46,15 @@ enum Constants {
             static let title = "User not found"
             static let message = "Check for typos in your search and try again."
         }
+
+        struct FailedToGetRepos {
+            static let title = "Failed to get repos"
+            static let message = Default.message
+        }
+    }
+
+    struct LoadingTexts {
+        static let fetchUser = "Fetching user"
+        static let fetchRepos = "Fetching repos"
     }
 }

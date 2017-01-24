@@ -31,16 +31,27 @@ class ReposViewController: UIViewController {
 
         reposView.delegate = self
 
-        output.shouldGetRepos(username: username)
+        fetchRepos()
+    }
+
+    private func fetchRepos() {
+        router.showLoadingView(text: Constants.LoadingTexts.fetchRepos) {
+            self.output.shouldGetRepos(username: self.username)
+        }
     }
 }
 
 extension ReposViewController: ReposPresenterOutput {
     func showRepos(viewModel: ReposViewModel) {
-        reposView.showRepos(viewModel: viewModel)
+        router.hideLoadingView {
+            self.reposView.showRepos(viewModel: viewModel)
+        }
     }
 
-    func showFailedToFetchReposErrorMessage() {
+    func showErrorAlert(alertController: UIAlertController) {
+        router.hideLoadingView {
+            self.present(alertController, animated: false)
+        }
     }
 }
 

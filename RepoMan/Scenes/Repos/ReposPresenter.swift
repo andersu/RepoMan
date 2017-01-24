@@ -10,7 +10,7 @@ import UIKit
 
 protocol ReposPresenterOutput: class {
     func showRepos(viewModel: ReposViewModel)
-    func showFailedToFetchReposErrorMessage()
+    func showErrorAlert(alertController: UIAlertController)
 }
 
 class ReposPresenter {
@@ -33,7 +33,8 @@ extension ReposPresenter: ReposInteractorOutput {
 
     func failedToFetchRepos() {
         DispatchQueue.main.async {
-            self.output.showFailedToFetchReposErrorMessage()
+            let errorAlert = ErrorAlertCreator.create(title: Constants.Errors.FailedToGetRepos.title, message: Constants.Errors.FailedToGetRepos.message)
+            self.output.showErrorAlert(alertController: errorAlert)
         }
     }
 }

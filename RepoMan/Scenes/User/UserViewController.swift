@@ -33,7 +33,7 @@ class UserViewController: UIViewController {
     }
 
     private func fetchUser() {
-        router.showLoadingView(text: "Fetching user") {
+        router.showLoadingView(text: Constants.LoadingTexts.fetchUser) {
             self.output.shouldFetchUser(username: self.username)
         }
     }

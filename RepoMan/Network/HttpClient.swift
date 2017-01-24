@@ -29,7 +29,7 @@ class HttpClient {
     private func createRequest(url: URL, httpMethod: String) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod
-        request.timeoutInterval = 10.0
+        request.timeoutInterval = 5.0
 
         return request
     }

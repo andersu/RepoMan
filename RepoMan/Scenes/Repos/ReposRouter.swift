@@ -11,8 +11,8 @@ import UIKit
 protocol ReposRouterInput {
 }
 
-class ReposRouter: ReposRouterInput {
-
+class ReposRouter: ReposRouterInput, Loading {
+    typealias T = ReposViewController
     weak var viewController: ReposViewController!
 
     init(viewController: ReposViewController) {
