@@ -19,6 +19,7 @@ class UserViewController: UIViewController {
     @IBOutlet var userView: UserView!
 
     var username: String! // Is set by router of previous scene
+    var shouldFetchUser = true
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +30,16 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
 
         userView.delegate = self
-        fetchUser()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // Only fetch user the first time the view appears
+        if shouldFetchUser {
+            fetchUser()
+            shouldFetchUser = false
+        }
     }
 
     private func fetchUser() {

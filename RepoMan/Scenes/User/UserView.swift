@@ -22,11 +22,6 @@ class UserView: NibLoadingView {
     @IBOutlet weak var seeReposButton: UIButton!
     @IBOutlet weak var avatarImageView: UIImageView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        clearTexts()
-    }
-
     @IBAction func seeReposButtonClicked(_: Any) {
         delegate.seeReposButtonClicked()
     }
@@ -42,12 +37,5 @@ class UserView: NibLoadingView {
         if let avatarUrl = viewModel.avatarUrl {
             avatarImageView.kf.setImage(with: ImageResource(downloadURL: avatarUrl, cacheKey: viewModel.avatarCacheKey), placeholder: nil, options: nil)
         }
-    }
-
-    // Clear the dummy texts from the xib file
-    private func clearTexts() {
-        nameLabel.text = " "
-        usernameLabel.text = " "
-        publicReposLabel.text = " "
     }
 }

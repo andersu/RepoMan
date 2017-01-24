@@ -18,6 +18,7 @@ class ReposViewController: UIViewController {
     var router: ReposRouter!
 
     var username: String! // Is set by router of previous scene
+    var shouldFetchRepos = true
 
     @IBOutlet var reposView: ReposView!
 
@@ -30,8 +31,16 @@ class ReposViewController: UIViewController {
         super.viewDidLoad()
 
         reposView.delegate = self
+    }
 
-        fetchRepos()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // Only fetch user the first time the view appears
+        if shouldFetchRepos {
+            fetchRepos()
+            shouldFetchRepos = false
+        }
     }
 
     private func fetchRepos() {
