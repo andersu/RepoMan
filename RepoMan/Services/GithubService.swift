@@ -19,18 +19,23 @@ class GithubService {
     func getUser(username: String, completion: @escaping (User?, Error?) -> Void) {
         client.get(url: Constants.Api.getUserUrl(username: username)) { data, error in
             var user: User?
+            var errorResult = error
 
             if let data = data {
                 do {
                     if let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String: Any] {
                         user = User.from(json: json)
+                        if user == nil {
+                            errorResult = HttpError.other
+                        }
                     }
-                } catch {
-                    Logger.printDebug(tag: self.logTag, error.localizedDescription)
+                } catch let parseError {
+                    errorResult = parseError
+                    Logger.printDebug(tag: self.logTag, parseError.localizedDescription)
                 }
             }
 
-            completion(user, error)
+            completion(user, errorResult)
         }
     }
 
