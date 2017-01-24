@@ -30,4 +30,16 @@ class UserViewModel {
 
         return nil
     }
+
+    var seeReposButtonAlpha: CGFloat {
+        if let _ = user {
+            return Constants.Alpha.enabled
+        }
+
+        return Constants.Alpha.disabled
+    }
+
+    var seeReposButtonIsEnabled: Bool {
+        return user != nil
+    }
 }

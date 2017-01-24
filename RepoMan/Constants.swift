@@ -30,4 +30,21 @@ enum Constants {
         static let disabled: CGFloat = 0.5
         static let enabled: CGFloat = 1.0
     }
+
+    struct Errors {
+        struct Default {
+            static let title = "Something went wrong"
+            static let message = "Check your network connection and try again."
+        }
+
+        struct FailedToGetUser {
+            static let title = "Failed to get user"
+            static let message = Default.message
+        }
+
+        struct UserNotFound {
+            static let title = "User not found"
+            static let message = "Check for typos in your search and try again."
+        }
+    }
 }

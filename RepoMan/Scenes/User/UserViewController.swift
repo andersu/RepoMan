@@ -16,7 +16,7 @@ class UserViewController: UIViewController {
     var output: UserViewControllerOutput!
     var router: UserRouter!
 
-    @IBOutlet var userView: UserView! // TODO: hook this up with view in storyboard
+    @IBOutlet var userView: UserView!
 
     var username: String! // Is set by router of previous scene
 
@@ -27,20 +27,30 @@ class UserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.shouldFetchUser(username: username)
 
         userView.delegate = self
+        fetchUser()
+    }
+
+    private func fetchUser() {
+        router.showLoadingView(text: "Fetching user") {
+            self.output.shouldFetchUser(username: self.username)
+        }
     }
 }
 
 extension UserViewController: UserPresenterOutput {
     func present(viewModel: UserViewModel) {
-        navigationItem.title = viewModel.title
-        userView.present(viewModel: viewModel)
+        router.hideLoadingView {
+            self.navigationItem.title = viewModel.title
+            self.userView.present(viewModel: viewModel)
+        }
     }
 
-    func showFailedToFetchUserErrorMessage() {
-        // TODO:
+    func showErrorAlert(alertController: UIAlertController) {
+        router.hideLoadingView {
+            self.present(alertController, animated: false)
+        }
     }
 }
 

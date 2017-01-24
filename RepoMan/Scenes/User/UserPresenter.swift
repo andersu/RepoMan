@@ -10,7 +10,7 @@ import UIKit
 
 protocol UserPresenterOutput: class {
     func present(viewModel: UserViewModel)
-    func showFailedToFetchUserErrorMessage()
+    func showErrorAlert(alertController: UIAlertController)
 }
 
 class UserPresenter {
@@ -33,7 +33,19 @@ extension UserPresenter: UserInteractorOutput {
 
     func failedToFetchUser() {
         DispatchQueue.main.async {
-            self.output.showFailedToFetchUserErrorMessage()
+            let error = Constants.Errors.FailedToGetUser.self
+            let errorAlert = ErrorAlertCreator.create(title: error.title, message: error.message)
+
+            self.output.showErrorAlert(alertController: errorAlert)
+        }
+    }
+
+    func userNotFound() {
+        DispatchQueue.main.async {
+            let error = Constants.Errors.UserNotFound.self
+            let errorAlert = ErrorAlertCreator.create(title: error.title, message: error.message)
+
+            self.output.showErrorAlert(alertController: errorAlert)
         }
     }
 }

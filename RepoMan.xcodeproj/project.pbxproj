@@ -11,6 +11,12 @@
 		9F5D2F8D1E33823E00738CDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D2F8C1E33823E00738CDA /* Constants.swift */; };
 		9F5D2F8F1E3383AD00738CDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D2F8E1E3383AD00738CDA /* User.swift */; };
 		9F5D2F921E33840900738CDA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D2F911E33840900738CDA /* Logger.swift */; };
+		9FB770391E37CFE6003FAF75 /* NotFoundException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770381E37CFE6003FAF75 /* NotFoundException.swift */; };
+		9FB7703B1E37D475003FAF75 /* ErrorAlertCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7703A1E37D475003FAF75 /* ErrorAlertCreator.swift */; };
+		9FB7703E1E37D783003FAF75 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7703D1E37D783003FAF75 /* Loading.swift */; };
+		9FB770411E37D7B7003FAF75 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770401E37D7B7003FAF75 /* LoadingViewController.swift */; };
+		9FB770431E37D81E003FAF75 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770421E37D81E003FAF75 /* LoadingView.swift */; };
+		9FB770451E37D836003FAF75 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB770441E37D836003FAF75 /* LoadingView.xib */; };
 		9FE6AECE1E26A68A007F535A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AECD1E26A68A007F535A /* AppDelegate.swift */; };
 		9FE6AED31E26A68A007F535A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED11E26A68A007F535A /* Main.storyboard */; };
 		9FE6AED51E26A68A007F535A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED41E26A68A007F535A /* Assets.xcassets */; };
@@ -72,6 +78,12 @@
 		9F5D2F8C1E33823E00738CDA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F5D2F8E1E3383AD00738CDA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F5D2F911E33840900738CDA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		9FB770381E37CFE6003FAF75 /* NotFoundException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotFoundException.swift; sourceTree = "<group>"; };
+		9FB7703A1E37D475003FAF75 /* ErrorAlertCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlertCreator.swift; sourceTree = "<group>"; };
+		9FB7703D1E37D783003FAF75 /* Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		9FB770401E37D7B7003FAF75 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		9FB770421E37D81E003FAF75 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9FB770441E37D836003FAF75 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		9FE6AECA1E26A68A007F535A /* RepoMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE6AECD1E26A68A007F535A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FE6AED21E26A68A007F535A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				9F5D2F8A1E33822100738CDA /* HttpClient.swift */,
+				9FB770381E37CFE6003FAF75 /* NotFoundException.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -152,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				9F5D2F911E33840900738CDA /* Logger.swift */,
+				9FB7703A1E37D475003FAF75 /* ErrorAlertCreator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -169,6 +183,24 @@
 				9FFA2FF61E3388F70047B5A5 /* UserSearchView.xib */,
 			);
 			path = UserSearch;
+			sourceTree = "<group>";
+		};
+		9FB7703C1E37D772003FAF75 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9FB7703D1E37D783003FAF75 /* Loading.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9FB7703F1E37D7A4003FAF75 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				9FB770401E37D7B7003FAF75 /* LoadingViewController.swift */,
+				9FB770421E37D81E003FAF75 /* LoadingView.swift */,
+				9FB770441E37D836003FAF75 /* LoadingView.xib */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		9FE6AEC11E26A68A007F535A = {
@@ -203,6 +235,7 @@
 				9FE6AF021E26A961007F535A /* Views */,
 				9F5D2F891E33820600738CDA /* Network */,
 				9F5D2F901E3383F600738CDA /* Utils */,
+				9FB7703C1E37D772003FAF75 /* Protocols */,
 				9FFA301E1E33A0C00047B5A5 /* Extensions */,
 				9FE6AF0B1E26AB31007F535A /* ThirdParty */,
 			);
@@ -230,6 +263,7 @@
 		9FE6AEEE1E26A69C007F535A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9FB7703F1E37D7A4003FAF75 /* Loading */,
 				9F5D2F931E3385F500738CDA /* UserSearch */,
 				9FFA2FF81E338B9A0047B5A5 /* User */,
 				9FFA30091E3394030047B5A5 /* Repos */,
@@ -426,6 +460,7 @@
 				9FFA301D1E3397890047B5A5 /* RepoCell.xib in Resources */,
 				9FE6AED51E26A68A007F535A /* Assets.xcassets in Resources */,
 				9FE6AED31E26A68A007F535A /* Main.storyboard in Resources */,
+				9FB770451E37D836003FAF75 /* LoadingView.xib in Resources */,
 				9FFA30251E3553030047B5A5 /* RepoView.xib in Resources */,
 				9FFA30081E338F5E0047B5A5 /* UserView.xib in Resources */,
 			);
@@ -465,6 +500,7 @@
 				9FFA30241E3553030047B5A5 /* RepoView.swift in Sources */,
 				9FE6AF0E1E26AB67007F535A /* NibDesignable.swift in Sources */,
 				9FFA30001E338BB90047B5A5 /* UserConfigurator.swift in Sources */,
+				9FB7703E1E37D783003FAF75 /* Loading.swift in Sources */,
 				9FFA30031E338BB90047B5A5 /* UserRouter.swift in Sources */,
 				9FE6AF201E26B11B007F535A /* RepoViewController.swift in Sources */,
 				9FE6AECE1E26A68A007F535A /* AppDelegate.swift in Sources */,
@@ -485,12 +521,15 @@
 				9FE6AF1F1E26B11B007F535A /* RepoRouter.swift in Sources */,
 				9FFA30131E3394190047B5A5 /* ReposPresenter.swift in Sources */,
 				9FFA2FF21E3388C90047B5A5 /* UserSearchRouter.swift in Sources */,
+				9FB770431E37D81E003FAF75 /* LoadingView.swift in Sources */,
+				9FB7703B1E37D475003FAF75 /* ErrorAlertCreator.swift in Sources */,
 				9FFA30141E3394190047B5A5 /* ReposRouter.swift in Sources */,
 				9FE6AF1C1E26B11B007F535A /* RepoConfigurator.swift in Sources */,
 				9FFA30051E338BB90047B5A5 /* UserViewController.swift in Sources */,
 				9FFA30151E3394190047B5A5 /* ReposView.swift in Sources */,
 				9FFA30201E33A0DD0047B5A5 /* Date+Formats.swift in Sources */,
 				9FE6AF1D1E26B11B007F535A /* RepoInteractor.swift in Sources */,
+				9FB770411E37D7B7003FAF75 /* LoadingViewController.swift in Sources */,
 				9FFA2FF41E3388C90047B5A5 /* UserSearchViewController.swift in Sources */,
 				9FFA30021E338BB90047B5A5 /* UserPresenter.swift in Sources */,
 				9FE6AF1E1E26B11B007F535A /* RepoPresenter.swift in Sources */,
@@ -499,6 +538,7 @@
 				9FFA30171E3394190047B5A5 /* ReposViewModel.swift in Sources */,
 				9FFA2FF11E3388C90047B5A5 /* UserSearchPresenter.swift in Sources */,
 				9F5D2F8F1E3383AD00738CDA /* User.swift in Sources */,
+				9FB770391E37CFE6003FAF75 /* NotFoundException.swift in Sources */,
 				9FFA301C1E3397890047B5A5 /* RepoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

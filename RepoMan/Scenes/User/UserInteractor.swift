@@ -11,6 +11,7 @@ import UIKit
 protocol UserInteractorOutput {
     func fetched(user: User)
     func failedToFetchUser()
+    func userNotFound()
 }
 
 class UserInteractor {
@@ -25,11 +26,15 @@ class UserInteractor {
 
 extension UserInteractor: UserViewControllerOutput {
     func shouldFetchUser(username: String) {
-        githubService.getUser(username: username) { user in
+        githubService.getUser(username: username) { user, error in
             if let user = user {
                 self.output.fetched(user: user)
             } else {
-                self.output.failedToFetchUser()
+                if let error = error as? HttpError, error == .notFound {
+                    self.output.userNotFound()
+                } else {
+                    self.output.failedToFetchUser()
+                }
             }
         }
     }

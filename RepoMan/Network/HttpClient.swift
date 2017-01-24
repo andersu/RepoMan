@@ -11,7 +11,8 @@ import Foundation
 typealias HTTPResult = (Data?, Error?) -> Void
 
 enum HttpError: Error {
-    case networkError
+    case notFound
+    case other
 }
 
 class HttpClient {
@@ -35,14 +36,16 @@ class HttpClient {
 
     private func handleResponse(data: Data?, response: URLResponse?, error: Error?, completion: HTTPResult) {
         if error != nil {
-            completion(nil, HttpError.networkError)
+            completion(nil, HttpError.other)
         } else {
             if let response = response as? HTTPURLResponse {
                 switch response.statusCode {
                 case 200 ... 299:
                     completion(data, nil)
+                case 404:
+                    completion(nil, HttpError.notFound)
                 default:
-                    completion(nil, HttpError.networkError)
+                    completion(nil, HttpError.other)
                 }
             }
         }

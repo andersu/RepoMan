@@ -16,7 +16,7 @@ class GithubService {
         self.client = client
     }
 
-    func getUser(username: String, completion: @escaping (User?) -> Void) {
+    func getUser(username: String, completion: @escaping (User?, Error?) -> Void) {
         client.get(url: Constants.Api.getUserUrl(username: username)) { data, error in
             var user: User?
 
@@ -30,11 +30,7 @@ class GithubService {
                 }
             }
 
-            if let error = error {
-                Logger.printDebug(tag: self.logTag, error.localizedDescription)
-            }
-
-            completion(user)
+            completion(user, error)
         }
     }
 

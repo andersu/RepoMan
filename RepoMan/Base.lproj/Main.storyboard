@@ -152,7 +152,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ek1-eg-opd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gUZ-3u-QXN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gUZ-3u-QXN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.49803921569999998" green="0.0" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,6 +165,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhw-R8-L7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-580" y="36"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="oZf-m5-ERL">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" id="M5b-4J-yyg" customClass="LoadingViewController" customModule="RepoMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="534-jb-Txn"/>
+                        <viewControllerLayoutGuide type="bottom" id="GvE-9d-2QN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AxI-8D-tBp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsG-ub-MY2" customClass="LoadingView" customModule="RepoMan" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gsG-ub-MY2" firstAttribute="top" secondItem="534-jb-Txn" secondAttribute="bottom" id="58h-XD-uMG"/>
+                            <constraint firstAttribute="trailing" secondItem="gsG-ub-MY2" secondAttribute="trailing" id="9bu-Dd-mky"/>
+                            <constraint firstItem="GvE-9d-2QN" firstAttribute="top" secondItem="gsG-ub-MY2" secondAttribute="bottom" id="UkX-6P-J93"/>
+                            <constraint firstItem="gsG-ub-MY2" firstAttribute="leading" secondItem="AxI-8D-tBp" secondAttribute="leading" id="lxX-H4-ylG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="gsG-ub-MY2" id="Nd2-ix-rHC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQy-wU-KdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-580" y="752"/>
         </scene>
     </scenes>
 </document>

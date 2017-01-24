@@ -11,8 +11,8 @@ import UIKit
 protocol UserRouterInput {
 }
 
-class UserRouter: UserRouterInput {
-
+class UserRouter: UserRouterInput, Loading {
+    typealias T = UserViewController
     weak var viewController: UserViewController!
 
     init(viewController: UserViewController) {

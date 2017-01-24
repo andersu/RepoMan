@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="nameLabel" destination="NcP-tU-4pz" id="Rzi-L7-yUZ"/>
                 <outlet property="publicReposLabel" destination="lhb-BY-0kj" id="Z9r-Ho-YpO"/>
+                <outlet property="seeReposButton" destination="xiL-eX-de2" id="Zcv-gi-yZu"/>
                 <outlet property="usernameLabel" destination="mGg-dg-Ork" id="8ck-MV-fwA"/>
             </connections>
         </placeholder>
@@ -57,7 +58,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiL-eX-de2">
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiL-eX-de2">
                     <rect key="frame" x="16" y="199" width="343" height="50"/>
                     <color key="backgroundColor" red="0.49803921568627452" green="0.0" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>

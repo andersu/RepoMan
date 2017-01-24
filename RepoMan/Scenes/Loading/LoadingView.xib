@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GorditaRegular.otf">
+            <string>GorditaRegular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="RepoMan" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingTextLabel" destination="eUv-3R-Wny" id="dbY-M6-RWh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="7Il-tM-ayl">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfe-Hu-S0l">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ev0-Ji-Vpi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQ0-m6-3dC">
+                                <rect key="frame" x="134" y="293" width="107" height="82"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kxA-Hi-NOb">
+                                        <rect key="frame" x="29" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8uV-uw-kLc"/>
+                                            <constraint firstAttribute="width" constant="50" id="LIY-3G-mUo"/>
+                                        </constraints>
+                                        <color key="color" red="0.49803921569999998" green="0.0" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logger inn" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUv-3R-Wny">
+                                        <rect key="frame" x="0.0" y="60" width="107" height="22"/>
+                                        <fontDescription key="fontDescription" name="GorditaRegular" family="Gordita" pointSize="20"/>
+                                        <color key="textColor" red="0.49803921569999998" green="0.0" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eUv-3R-Wny" secondAttribute="trailing" id="3D2-pb-0ST"/>
+                                    <constraint firstItem="eUv-3R-Wny" firstAttribute="leading" secondItem="VQ0-m6-3dC" secondAttribute="leading" id="7MM-DM-X3R"/>
+                                    <constraint firstItem="kxA-Hi-NOb" firstAttribute="top" secondItem="VQ0-m6-3dC" secondAttribute="top" id="IQO-1w-oOG"/>
+                                    <constraint firstAttribute="bottom" secondItem="eUv-3R-Wny" secondAttribute="bottom" id="MUe-bX-g55"/>
+                                    <constraint firstItem="kxA-Hi-NOb" firstAttribute="centerX" secondItem="VQ0-m6-3dC" secondAttribute="centerX" id="NTZ-oH-T2z"/>
+                                    <constraint firstItem="eUv-3R-Wny" firstAttribute="top" secondItem="kxA-Hi-NOb" secondAttribute="bottom" constant="10" id="Vqf-Ey-jLI"/>
+                                    <constraint firstItem="kxA-Hi-NOb" firstAttribute="centerY" secondItem="VQ0-m6-3dC" secondAttribute="centerY" constant="-16" id="tS6-Gc-4pL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="VQ0-m6-3dC" firstAttribute="centerY" secondItem="Ev0-Ji-Vpi" secondAttribute="centerY" id="384-0H-LLF"/>
+                            <constraint firstItem="VQ0-m6-3dC" firstAttribute="centerX" secondItem="Ev0-Ji-Vpi" secondAttribute="centerX" id="hUC-rM-vIO"/>
+                        </constraints>
+                    </view>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Nfe-Hu-S0l" firstAttribute="leading" secondItem="7Il-tM-ayl" secondAttribute="leading" id="6dF-kj-wPr"/>
+                <constraint firstAttribute="bottom" secondItem="Nfe-Hu-S0l" secondAttribute="bottom" id="EnG-Hk-lun"/>
+                <constraint firstAttribute="trailing" secondItem="Nfe-Hu-S0l" secondAttribute="trailing" id="Jgz-au-pwD"/>
+                <constraint firstItem="Nfe-Hu-S0l" firstAttribute="top" secondItem="7Il-tM-ayl" secondAttribute="top" id="SCA-LP-FDM"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="65.5"/>
+        </view>
+    </objects>
+</document>
