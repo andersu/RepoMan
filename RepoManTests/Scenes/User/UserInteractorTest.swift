@@ -54,26 +54,6 @@ class UserInteractorTest: XCTestCase {
 }
 
 // MARK: Mocks
-class MockGithubService: GithubService {
-    static let user = User(username: "username", name: "name", publicRepos: 42, avatarUrl: nil)
-    
-    override func getUser(username: String, completion: @escaping (User?, Error?) -> Void) {
-        completion(MockGithubService.user, nil)
-    }
-}
-
-class MockNotFoundGithubService: GithubService {
-    override func getUser(username: String, completion: @escaping (User?, Error?) -> Void) {
-        completion(nil, HttpError.notFound)
-    }
-}
-
-class MockOtherErrorGithubService: GithubService {
-    override func getUser(username: String, completion: @escaping (User?, Error?) -> Void) {
-        completion(nil, HttpError.other)
-    }
-}
-
 class MockUserInteractorOutput: UserInteractorOutput {
     private (set) var user: User?
     private (set) var failedToFetchUserCalled = false

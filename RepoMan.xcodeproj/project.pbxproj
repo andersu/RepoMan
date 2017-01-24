@@ -25,6 +25,11 @@
 		9FB770521E37F16C003FAF75 /* UserPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770511E37F16C003FAF75 /* UserPresenterTest.swift */; };
 		9FB770541E37F3BD003FAF75 /* UserSearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770531E37F3BD003FAF75 /* UserSearchViewModelTest.swift */; };
 		9FB770561E37F53D003FAF75 /* UserViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770551E37F53D003FAF75 /* UserViewModelTest.swift */; };
+		9FB770591E37F76B003FAF75 /* ReposInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770581E37F76B003FAF75 /* ReposInteractorTest.swift */; };
+		9FB7705C1E37F7D1003FAF75 /* MockGithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7705B1E37F7D1003FAF75 /* MockGithubService.swift */; };
+		9FB7705E1E37F807003FAF75 /* MockNotFoundGithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7705D1E37F807003FAF75 /* MockNotFoundGithubService.swift */; };
+		9FB770601E37F824003FAF75 /* MockOtherErrorGithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7705F1E37F824003FAF75 /* MockOtherErrorGithubService.swift */; };
+		9FB770621E37FA11003FAF75 /* ReposPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770611E37FA11003FAF75 /* ReposPresenterTest.swift */; };
 		9FE6AECE1E26A68A007F535A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AECD1E26A68A007F535A /* AppDelegate.swift */; };
 		9FE6AED31E26A68A007F535A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED11E26A68A007F535A /* Main.storyboard */; };
 		9FE6AED51E26A68A007F535A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED41E26A68A007F535A /* Assets.xcassets */; };
@@ -104,6 +109,11 @@
 		9FB770511E37F16C003FAF75 /* UserPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPresenterTest.swift; sourceTree = "<group>"; };
 		9FB770531E37F3BD003FAF75 /* UserSearchViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewModelTest.swift; sourceTree = "<group>"; };
 		9FB770551E37F53D003FAF75 /* UserViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModelTest.swift; sourceTree = "<group>"; };
+		9FB770581E37F76B003FAF75 /* ReposInteractorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposInteractorTest.swift; sourceTree = "<group>"; };
+		9FB7705B1E37F7D1003FAF75 /* MockGithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockGithubService.swift; sourceTree = "<group>"; };
+		9FB7705D1E37F807003FAF75 /* MockNotFoundGithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNotFoundGithubService.swift; sourceTree = "<group>"; };
+		9FB7705F1E37F824003FAF75 /* MockOtherErrorGithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockOtherErrorGithubService.swift; sourceTree = "<group>"; };
+		9FB770611E37FA11003FAF75 /* ReposPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposPresenterTest.swift; sourceTree = "<group>"; };
 		9FE6AECA1E26A68A007F535A /* RepoMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE6AECD1E26A68A007F535A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FE6AED21E26A68A007F535A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -252,6 +262,7 @@
 			children = (
 				9FB770471E37EAA8003FAF75 /* UserSearch */,
 				9FB7704E1E37EE87003FAF75 /* User */,
+				9FB770571E37F754003FAF75 /* Repos */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -274,6 +285,25 @@
 				9FB770551E37F53D003FAF75 /* UserViewModelTest.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		9FB770571E37F754003FAF75 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				9FB770581E37F76B003FAF75 /* ReposInteractorTest.swift */,
+				9FB770611E37FA11003FAF75 /* ReposPresenterTest.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		9FB7705A1E37F7B7003FAF75 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9FB7705B1E37F7D1003FAF75 /* MockGithubService.swift */,
+				9FB7705D1E37F807003FAF75 /* MockNotFoundGithubService.swift */,
+				9FB7705F1E37F824003FAF75 /* MockOtherErrorGithubService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		9FE6AEC11E26A68A007F535A = {
@@ -320,6 +350,7 @@
 		9FE6AEE11E26A68A007F535A /* RepoManTests */ = {
 			isa = PBXGroup;
 			children = (
+				9FB7705A1E37F7B7003FAF75 /* Mocks */,
 				9FB770461E37EA98003FAF75 /* Scenes */,
 				9FE6AEE21E26A68A007F535A /* RepoManTests.swift */,
 				9FE6AEE41E26A68A007F535A /* Info.plist */,
@@ -721,12 +752,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FB770501E37EE9A003FAF75 /* UserInteractorTest.swift in Sources */,
+				9FB770591E37F76B003FAF75 /* ReposInteractorTest.swift in Sources */,
 				9FB770521E37F16C003FAF75 /* UserPresenterTest.swift in Sources */,
 				9FE6AEE31E26A68A007F535A /* RepoManTests.swift in Sources */,
+				9FB7705E1E37F807003FAF75 /* MockNotFoundGithubService.swift in Sources */,
+				9FB7705C1E37F7D1003FAF75 /* MockGithubService.swift in Sources */,
+				9FB770621E37FA11003FAF75 /* ReposPresenterTest.swift in Sources */,
 				9FB770491E37EAC7003FAF75 /* UserSearchInteractorTest.swift in Sources */,
 				9FB770541E37F3BD003FAF75 /* UserSearchViewModelTest.swift in Sources */,
 				9FB770561E37F53D003FAF75 /* UserViewModelTest.swift in Sources */,
 				9FB7704D1E37ED0C003FAF75 /* AsyncTestUtil.swift in Sources */,
+				9FB770601E37F824003FAF75 /* MockOtherErrorGithubService.swift in Sources */,
 				9FB7704B1E37EC21003FAF75 /* UserSearchPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

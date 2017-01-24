@@ -8,7 +8,14 @@
 
 import Foundation
 
-class Repo {
+func == (lhs: Repo, rhs: Repo) -> Bool {
+    return lhs.name == rhs.name
+        && lhs.owner == rhs.owner
+        && lhs.createdAt == rhs.createdAt
+        && lhs.stargazersCount == rhs.stargazersCount
+}
+
+class Repo: Equatable {
     private static let logTag = String(describing: Repo.self)
 
     var name: String
