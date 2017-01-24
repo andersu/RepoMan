@@ -8,7 +8,14 @@
 
 import Foundation
 
-class User {
+func == (lhs: User, rhs: User) -> Bool {
+    return lhs.username == rhs.username
+        && lhs.name == rhs.name
+        && lhs.publicRepos == rhs.publicRepos
+        && lhs.avatarUrl == rhs.avatarUrl
+}
+
+class User: Equatable {
     private static let logTag = String(describing: User.self)
 
     var username: String

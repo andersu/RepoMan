@@ -21,6 +21,10 @@
 		9FB770491E37EAC7003FAF75 /* UserSearchInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770481E37EAC7003FAF75 /* UserSearchInteractorTest.swift */; };
 		9FB7704B1E37EC21003FAF75 /* UserSearchPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7704A1E37EC21003FAF75 /* UserSearchPresenterTest.swift */; };
 		9FB7704D1E37ED0C003FAF75 /* AsyncTestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7704C1E37ED0C003FAF75 /* AsyncTestUtil.swift */; };
+		9FB770501E37EE9A003FAF75 /* UserInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7704F1E37EE9A003FAF75 /* UserInteractorTest.swift */; };
+		9FB770521E37F16C003FAF75 /* UserPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770511E37F16C003FAF75 /* UserPresenterTest.swift */; };
+		9FB770541E37F3BD003FAF75 /* UserSearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770531E37F3BD003FAF75 /* UserSearchViewModelTest.swift */; };
+		9FB770561E37F53D003FAF75 /* UserViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB770551E37F53D003FAF75 /* UserViewModelTest.swift */; };
 		9FE6AECE1E26A68A007F535A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE6AECD1E26A68A007F535A /* AppDelegate.swift */; };
 		9FE6AED31E26A68A007F535A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED11E26A68A007F535A /* Main.storyboard */; };
 		9FE6AED51E26A68A007F535A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6AED41E26A68A007F535A /* Assets.xcassets */; };
@@ -96,6 +100,10 @@
 		9FB770481E37EAC7003FAF75 /* UserSearchInteractorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchInteractorTest.swift; sourceTree = "<group>"; };
 		9FB7704A1E37EC21003FAF75 /* UserSearchPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchPresenterTest.swift; sourceTree = "<group>"; };
 		9FB7704C1E37ED0C003FAF75 /* AsyncTestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTestUtil.swift; sourceTree = "<group>"; };
+		9FB7704F1E37EE9A003FAF75 /* UserInteractorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractorTest.swift; sourceTree = "<group>"; };
+		9FB770511E37F16C003FAF75 /* UserPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPresenterTest.swift; sourceTree = "<group>"; };
+		9FB770531E37F3BD003FAF75 /* UserSearchViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewModelTest.swift; sourceTree = "<group>"; };
+		9FB770551E37F53D003FAF75 /* UserViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModelTest.swift; sourceTree = "<group>"; };
 		9FE6AECA1E26A68A007F535A /* RepoMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE6AECD1E26A68A007F535A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FE6AED21E26A68A007F535A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -243,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				9FB770471E37EAA8003FAF75 /* UserSearch */,
+				9FB7704E1E37EE87003FAF75 /* User */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -252,8 +261,19 @@
 			children = (
 				9FB770481E37EAC7003FAF75 /* UserSearchInteractorTest.swift */,
 				9FB7704A1E37EC21003FAF75 /* UserSearchPresenterTest.swift */,
+				9FB770531E37F3BD003FAF75 /* UserSearchViewModelTest.swift */,
 			);
 			path = UserSearch;
+			sourceTree = "<group>";
+		};
+		9FB7704E1E37EE87003FAF75 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				9FB7704F1E37EE9A003FAF75 /* UserInteractorTest.swift */,
+				9FB770511E37F16C003FAF75 /* UserPresenterTest.swift */,
+				9FB770551E37F53D003FAF75 /* UserViewModelTest.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		9FE6AEC11E26A68A007F535A = {
@@ -700,8 +720,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB770501E37EE9A003FAF75 /* UserInteractorTest.swift in Sources */,
+				9FB770521E37F16C003FAF75 /* UserPresenterTest.swift in Sources */,
 				9FE6AEE31E26A68A007F535A /* RepoManTests.swift in Sources */,
 				9FB770491E37EAC7003FAF75 /* UserSearchInteractorTest.swift in Sources */,
+				9FB770541E37F3BD003FAF75 /* UserSearchViewModelTest.swift in Sources */,
+				9FB770561E37F53D003FAF75 /* UserViewModelTest.swift in Sources */,
 				9FB7704D1E37ED0C003FAF75 /* AsyncTestUtil.swift in Sources */,
 				9FB7704B1E37EC21003FAF75 /* UserSearchPresenterTest.swift in Sources */,
 			);
